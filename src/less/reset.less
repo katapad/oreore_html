@@ -1,0 +1,162 @@
+
+/*
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100.00%;
+	font-style: normal;
+}*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,abbr,address,cite,code,del,dfn,em,
+img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
+dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,figure,footer,header,hgroup,menu,nav,section,
+time,mark,audio,video {
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+
+// 参考 https://github.com/necolas/normalize.css/blob/master/normalize.css
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+audio, canvas, video { display: inline-block; }
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-size: 13px;
+//	font-family		: "メイリオ",'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',"ＭＳ Ｐゴシック",sans-serif;;
+	font-family		: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", "メイリオ", "ＭＳ Ｐゴシック", "MotoyaLCedar W3 mono", sans-serif;
+	color: #000;
+	line-height: 1.5;
+
+
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+.ie7 body,.ie6 body {
+	font-size:small;
+	font:x-small;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover { text-decoration: none; }
+
+a:active, a:focus { outline: none; }
+
+ul,li { list-style: none; }
+blockquote,q { quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after { content:none; }
+
+dt {
+	display: block;
+	width: auto;
+}
+
+table {
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 100%;
+	empty-cells: show;
+}
+
+td, th {
+	vertical-align: top;
+}
+
+th {
+	font-weight: normal;
+	text-align: left;
+}
+
+caption {
+	text-align: left;
+}
+
+/*6. Image Module*/
+/*  イメージをボックス上に接させる。
+	safariでおかしくなるのでtopをdefault。場合によりbottomにすることも
+-----------------------------------*/
+
+img {
+	background-color: transparent;
+	vertical-align: top;
+}
+
+a img {
+	border	: none;
+}
+
+
+br { letter-spacing: normal; }
+
+abbr { border-bottom: 1px dashed #999; cursor: help; }
+
+pre, code, samp, kbd, var {
+	font-family		: Monaco, 'Andale Mono', "Courier New", Courier, monospace;
+}
+
+kbd { border: 1px solid #999999; padding: 0.2em 0.4em; text-transform: uppercase; font-size: 83%; }
+dfn { font-weight: bold; }
+cite { font-weight: bold; }
+sup, sub { font-size: 75%; }
+hr { height: 1px; }
+
+input, textarea, select, option, optgroup {
+	vertical-align		: middle;
+	background-color	: #FFF;
+}
+select { min-width		: 2em; }
+option, optgroup { padding-right	: 0.4em; color: inherit; /* for Opera(Operaは継承してくれない)*/ }
+fieldset { border: none; }
+legend { display: none; }
+
+/*  input & label & option mousePointer
+-----------------------------------*/
+label[for],
+input[type="checkbox"],
+input[type="radio"],
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"],
+select,
+option {
+	cursor	: pointer;
+}
+
+optgroup {
+	cursor	: default;
+}
+

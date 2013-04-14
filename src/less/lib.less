@@ -1,0 +1,225 @@
+@path: '../';
+
+
+@borderColor: #ccc;
+
+.moveTo(@prop: left, @time: 0.2s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000), @delay: 0s ){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	-ms-transition: @arguments;
+}
+
+//.transition(@prop: left, @time: 0.2s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000), @delay: 0s ){
+//	-webkit-transition: @arguments;
+//	-moz-transition: @arguments;
+//}
+
+.fadeTo(@prop: opacity, @time: 0.65s, @ease: ease ){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-ms-transition: @arguments;
+	-o-transition: @arguments;
+}
+
+.boxSize(@value: border-box) {
+	box-sizing: @value;
+	-moz-box-sizing: @value;
+	-ms-box-sizing: @value;
+	-o-box-sizing: @value;
+}
+
+.origin(@x: 0, @y: 0) {
+	transform-origin: @arguments;
+	-webkit-transform-origin: @arguments;
+	-moz-transform-origin: @arguments;
+	-ms-transform-origin: @arguments;
+	-o-transform-origin: @arguments;
+}
+
+.scale(@value: 1.6) {
+	-webkit-transform: scale(@value);
+	-moz-transform: scale(@value);
+	-ms-transform: scale(@value);
+	-o-transform: scale(@value);
+}
+.transform(@prop) {
+	-webkit-transform: @prop;
+	-moz-transform: @prop;
+	-ms-transform: @prop;
+	-o-transform: @prop;
+}
+
+.transScale(@value: 0.667) {
+	transform:scale(@value);
+	-webkit-transform:scale(@value);
+	-ms-transform:scale(@value);
+	-moz-transform:scale(@value);
+	-o-transform:scale(@value);
+}
+
+.zoom (@value: 0.667) {
+	zoom:@value;
+	-moz-zoom:@value;
+	-o-zoom:@value;
+}
+
+.transAnim(@time: 0.2s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000), @delay: 0s) {
+	-webkit-transition: -webkit-transform @time @ease @delay;
+	-moz-transition: -moz-transform @time @ease @delay;
+	-o-transition: -o-transform @time @ease @delay;
+	-ms-transition: -ms-transform @time @ease @delay;
+}
+
+.abs(@x: 0, @y: 0) {
+	position: absolute;
+	left: @x;
+	top: @y;
+}
+
+.blockAbs(@x: 0, @y: 0) {
+	display: block;
+	.abs(@x, @y);
+}
+
+.size(@w: 0, @h: 0) {
+	width: @w;
+	height: @h;
+}
+
+.rect(@x:0, @y: 0, @w: 100px, @h: 100px) {
+	.abs(@x, @y);
+	.size(@w, @h);
+}
+
+.normalShadow() {
+	text-shadow:
+		0px 0px 1px #000,
+		0px 0px 2px #000,
+		0px 0px 4px #000,
+		0px 0px 6px #000;
+
+}
+
+
+.amim(@name, @time: 0.1s, @ease: ease, @delay: 0, @loop: infinite, @direction: alternate) {
+	-webkit-animation: @name @time @ease @delay @loop @direction;
+	-moz-animation: @name @time @ease @delay @loop @direction;
+	-o-animation: @name @time @ease @delay @loop @direction;
+	-ms-animation: @name @time @ease @delay @loop @direction;
+	animation: @name @time @ease @delay @loop @direction;
+}
+
+
+.blink() {
+	.amim(blink, 0.04s, steps(100), 0.04s, 3);
+}
+.fuwaBlink() {
+	.amim(blink2, 1.5s, ease, 0.1s, 1);
+}
+
+.blinkFrames(@def: 0.6) {
+	0%    {opacity: @def}
+	100%  {opacity: 1}
+}
+
+@blink2Alpha: 0.8;
+@-webkit-keyframes blink2 {.blinkFrames(@blink2Alpha);}
+@-moz-keyframes blink2 {.blinkFrames(@blink2Alpha);}
+@-ms-keyframes blink2 {.blinkFrames(@blink2Alpha);}
+@-o-keyframes blink2 {.blinkFrames(@blink2Alpha);}
+@keyframes blink2 {.blinkFrames(@blink2Alpha);}
+
+@-webkit-keyframes blink {.blinkFrames();}
+@-moz-keyframes blink {.blinkFrames();}
+@-ms-keyframes blink {.blinkFrames();}
+@-o-keyframes blink {.blinkFrames();}
+@keyframes blink {.blinkFrames();}
+
+
+.transition() {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	-webkit-transform: perspective(400px) rotateY(@deg);
+	-moz-transition: -moz-transform 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	-moz-transform: perspective(400px) rotateY(@deg);
+	-o-transition: -o-transform 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	-o-transform: perspective(400px) rotateY(@deg);
+	-ms-transition: -ms-transform 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	-ms-transform: perspective(400px) rotateY(@deg);
+	transition: transform 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	transform: perspective(400px) rotateY(@deg);
+
+}
+
+.kururin(@deg: 360deg, @time: 0.25s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000)) {
+	.trans(rotateY(@deg));
+}
+
+.kururin2(@deg: 360deg, @time: 0.25s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000)) {
+	.trans(rotateX(@deg));
+}
+
+.trans(@transprops, @time: 0.25s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000)) {
+	-webkit-transition: -webkit-transform @time @ease;
+	-webkit-transform: @transprops;
+	-moz-transition: -moz-transform @time @ease;
+	-moz-transform: @transprops;
+	-o-transition: -o-transform @time @ease;
+	-o-transform: @transprops;
+	-ms-transition: -ms-transform @time @ease;
+	-ms-transform: @transprops;
+	transition: transform @time @ease;
+	transform: @transprops;
+}
+
+.bgScroll(@prop: background-position, @time: 0.25s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000) ){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	-ms-transition: @arguments;
+	transition: @arguments;
+}
+
+
+.hide(@prop: opacity, @time: 0.25s, @ease: cubic-bezier(0.860, 0.000, 0.070, 1.000) ){
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	-ms-transition: @arguments;
+	transition: @arguments;
+}
+
+
+
+
+
+
+//3dとか
+
+.crisp-edges {
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+	image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.parsepective(@value :875px) {
+	perspective: @value;
+	-webkit-perspective: @value;
+	-moz-perspective: @value;
+	-o-perspective: @value;
+}
+
+.preserve3d {
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+}
+
+
+
+
+

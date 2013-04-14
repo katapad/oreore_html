@@ -1,0 +1,22 @@
+!!! 5
+//if lt IE 7
+	html(class="no-js ie ie6 oldie", lang="#{lang}", xmlns:fb="https://www.facebook.com/2008/fbml")
+//if IE 7
+	html(class="no-js ie ie7 oldie", lang="#{lang}", xmlns:fb="https://www.facebook.com/2008/fbml")
+//if IE 8
+	html(class="no-js ie ie8 oldie", lang="#{lang}", xmlns:fb="https://www.facebook.com/2008/fbml")
+// [if gt IE 8] <!
+html(class="no-js", lang="#{lang}", xmlns:fb="https://www.facebook.com/2008/fbml")
+	// <![endif]
+
+	block head
+		include inc/head
+
+	body
+		#wrapper
+			block content
+
+		include inc/social_btn
+
+	include inc/scripts
+	include inc/social_js

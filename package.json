@@ -1,0 +1,23 @@
+{
+  "name": "oreore",
+  "version": "0.0.0",
+  "description": "jigoku ni imasu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "none",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.6.0",
+    "grunt-templater": "0.0.3-1",
+    "grunt-ftp-deploy": "0.0.7",
+    "jade": "~0.28.2",
+    "mocha": "~1.8.2"
+  }
+}

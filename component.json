@@ -1,0 +1,27 @@
+{
+	"name": "oreore_tmpl",
+	"version": "1.0.0",
+	"dependencies": {
+		"jquery": "*",
+		"modernizr": null,
+		"backbone": null,
+		"underscore": null,
+		"html5shiv": null,
+		"jquery.transit": null,
+		"jquery-easing": null,
+		"jquery.cookie": null,
+		"swfobject": null,
+		"mustache": null
+	},
+	"ignore": [
+		"build",
+		"src",
+		"node_modules",
+		".bowerrc",
+		".gitignore",
+		"component.json",
+		"**/*.iml",
+		"package.json",
+		"README.md"
+	]
+}

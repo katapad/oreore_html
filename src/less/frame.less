@@ -1,0 +1,48 @@
+@import 'color';
+@import 'lib';
+@import 'zIndex';
+
+
+body {
+	color: @mainColor;
+}
+
+#screenRect {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:0;
+	top: 0;
+	visibility: hidden;
+}
+
+
+div#wrapper {
+	text-align	: left;
+	width: 820px;
+	margin: auto;
+	padding-bottom: 100px;
+
+}
+
+header#globalHeader {
+	position: relative;
+	z-index: @z_header;
+	width: 820px - 71px;
+
+
+}
+
+
+#globalFooter {
+	width: 100%;
+	background: #000;
+	position: fixed;
+	bottom: 0px;
+	height: 35px;
+	z-index: @z_footer;
+
+
+}
+
+
