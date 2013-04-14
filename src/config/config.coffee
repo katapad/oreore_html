@@ -10,7 +10,10 @@ _clone = (obj)->
 
 _overwrite = (target, over)->
 	for key, value of over
-		target[key] = value
+		if typeof value is 'object'
+			_overwrite(target[key], value)
+		else
+			target[key] = value
 
 
 _addExtensions = (list, addList)->
